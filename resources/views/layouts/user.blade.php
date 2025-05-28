@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="{{asset('assets/css_user/register.css')}}">
     <!-- Icon Links -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--Recaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 
     <script src="//unpkg.com/alpinejs" defer></script>
 
@@ -127,5 +129,11 @@
     </div>
     <!--Contact section and footer end -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Handel token Re-captcha -->
+    <script>
+        function onSubmit(token) {
+            document.getElementById("register-form").submit();
+        }
+    </script>
 </body>
 </html>
