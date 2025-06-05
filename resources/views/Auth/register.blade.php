@@ -22,7 +22,7 @@
     <button 
       data-sitekey="{{config('services.recaptcha.site_key')}}"
       data-callback='onSubmit' data-action='submit' class="g-recaptcha register-btn">REGISTER</button>
-    <p class="mt-3">Already have an account? <a href="{{route('login')}}">Login</a></p>
+      <p class="mt-3">Already have an account? <a href="{{route('login')}}">Login</a></p>
   </form>
 </div>
 @endsection

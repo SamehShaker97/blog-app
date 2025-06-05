@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\Auth\GoogleAuthController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -76,3 +77,7 @@ Route::controller(PageController::class)->group(function(){
   Route::post('/comments/{id}', 'store')->name('comments.store');
 });
 
+Route::controller(GoogleAuthController::class)->group(function(){
+  Route::get('/auth/redirect' ,'redirect')->name('auth.redirect');
+  Route::get('/auth/callback' , 'callback');
+});
